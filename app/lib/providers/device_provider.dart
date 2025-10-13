@@ -364,7 +364,7 @@ class DeviceProvider extends ChangeNotifier implements IDeviceServiceSubsciption
       builder: (context) => ConfirmationDialog(
         title: 'Firmware Update Available',
         description:
-            'A new firmware update (${_latestFirmwareVersion}) is available for your Omi device. Would you like to update now?',
+            'A new firmware update ($_latestFirmwareVersion) is available for your Omi device. Would you like to update now?',
         confirmText: 'Update',
         cancelText: 'Later',
         onConfirm: () {
@@ -423,6 +423,6 @@ class DeviceProvider extends ChangeNotifier implements IDeviceServiceSubsciption
       return;
     }
     _bleDisconnectDevice(connectedDevice!);
-    _reconnectAt = DateTime.now().add(Duration(seconds: 30));
+    _reconnectAt = DateTime.now().add(const Duration(seconds: 30));
   }
 }

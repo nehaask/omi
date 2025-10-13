@@ -109,7 +109,7 @@ class _PermissionsDesktopWidgetState extends State<PermissionsDesktopWidget> wit
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               margin: const EdgeInsets.only(bottom: 16),
               decoration: BoxDecoration(
-                color: Color(0xFF35343B).withOpacity(0.3),
+                color: const Color(0xFF35343B).withOpacity(0.3),
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
                   color: const Color.fromARGB(255, 188, 99, 121).withOpacity(0.3),

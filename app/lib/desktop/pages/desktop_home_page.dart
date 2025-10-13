@@ -39,7 +39,6 @@ import 'package:window_manager/window_manager.dart';
 import 'package:intercom_flutter/intercom_flutter.dart';
 import 'package:flutter/services.dart';
 import '../../pages/conversations/sync_page.dart';
-import 'home/widgets/battery_info_widget.dart';
 
 enum MacWindowButtonType { close, minimize, maximize }
 

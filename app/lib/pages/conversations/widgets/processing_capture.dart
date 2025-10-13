@@ -235,7 +235,7 @@ class _ConversationCaptureWidgetState extends State<ConversationCaptureWidget> w
           const SizedBox(width: 12),
           Container(
             decoration: BoxDecoration(
-              color: Color(0xFF35343B),
+              color: const Color(0xFF35343B),
               borderRadius: BorderRadius.circular(16),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -255,7 +255,7 @@ class _ConversationCaptureWidgetState extends State<ConversationCaptureWidget> w
           const SizedBox(width: 12),
           Container(
             decoration: BoxDecoration(
-              color: Color(0xFF35343B),
+              color: const Color(0xFF35343B),
               borderRadius: BorderRadius.circular(16),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -807,7 +807,7 @@ class _ProcessingConversationWidgetState extends State<ProcessingConversationWid
               const SizedBox(width: 20),
               Container(
                 decoration: BoxDecoration(
-                  color: Color(0xFF35343B),
+                  color: const Color(0xFF35343B),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),

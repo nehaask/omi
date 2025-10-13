@@ -320,7 +320,7 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
                                           onChanged: (value) {
                                             provider.setPersonaPublic(value);
                                           },
-                                          activeColor: Colors.deepPurple,
+                                          activeThumbColor: Colors.deepPurple,
                                         );
                                       },
                                     ),

@@ -60,7 +60,7 @@ class AppMetadataWidget extends StatelessWidget {
                     height: MediaQuery.of(context).size.width * 0.28,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30.0),
-                      border: Border.all(color: Color(0xFF35343B), width: 2.0),
+                      border: Border.all(color: const Color(0xFF35343B), width: 2.0),
                     ),
                     child: imageFile != null || imageUrl != null
                         ? (imageUrl == null
@@ -80,7 +80,7 @@ class AppMetadataWidget extends StatelessWidget {
                           onTap: pickImage,
                           child: Container(
                             padding: const EdgeInsets.all(8.0),
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFF35343B),
                               shape: BoxShape.circle,
                             ),
@@ -126,7 +126,7 @@ class AppMetadataWidget extends StatelessWidget {
                               margin: const EdgeInsets.only(left: 2.0, right: 2.0, top: 10, bottom: 6),
                               padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
                               decoration: BoxDecoration(
-                                color: Color(0xFF35343B),
+                                color: const Color(0xFF35343B),
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                               width: double.infinity,
@@ -154,7 +154,7 @@ class AppMetadataWidget extends StatelessWidget {
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(8.0),
                                       ),
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.copy,
                                         color: Colors.white,
                                         size: 20,
@@ -169,7 +169,7 @@ class AppMetadataWidget extends StatelessWidget {
                             ),
                           ],
                         )
-                      : SizedBox.shrink(),
+                      : const SizedBox.shrink(),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Text(
@@ -181,7 +181,7 @@ class AppMetadataWidget extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
                     margin: const EdgeInsets.only(left: 2.0, right: 2.0, top: 10, bottom: 6),
                     decoration: BoxDecoration(
-                      color: Color(0xFF35343B),
+                      color: const Color(0xFF35343B),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     width: double.infinity,
@@ -295,7 +295,7 @@ class AppMetadataWidget extends StatelessWidget {
                       margin: const EdgeInsets.only(left: 2.0, right: 2.0, top: 10, bottom: 6),
                       padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 10.0),
                       decoration: BoxDecoration(
-                        color: Color(0xFF35343B),
+                        color: const Color(0xFF35343B),
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       width: double.infinity,
@@ -334,7 +334,7 @@ class AppMetadataWidget extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
                     margin: const EdgeInsets.only(left: 2.0, right: 2.0, top: 10, bottom: 6),
                     decoration: BoxDecoration(
-                      color: Color(0xFF35343B),
+                      color: const Color(0xFF35343B),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     width: double.infinity,
@@ -355,9 +355,9 @@ class AppMetadataWidget extends StatelessWidget {
                                       effect: ShimmerEffect(
                                         baseColor: Colors.grey[700]!,
                                         highlightColor: Colors.grey[600]!,
-                                        duration: Duration(seconds: 1),
+                                        duration: const Duration(seconds: 1),
                                       ),
-                                      child: Bone.multiText(),
+                                      child: const Bone.multiText(),
                                     )
                                   : TextFormField(
                                       maxLines: null,
@@ -393,7 +393,7 @@ class AppMetadataWidget extends StatelessWidget {
                                   ),
                                 ),
                               )
-                            : SizedBox.shrink(),
+                            : const SizedBox.shrink(),
                       ],
                     ),
                   ),
@@ -408,7 +408,7 @@ class AppMetadataWidget extends StatelessWidget {
                             style: TextStyle(color: Colors.grey.shade300, fontSize: 16),
                           ),
                         )
-                      : SizedBox.shrink(),
+                      : const SizedBox.shrink(),
                   allowPaidApps
                       ? GestureDetector(
                           onTap: () {
@@ -486,7 +486,7 @@ class AppMetadataWidget extends StatelessWidget {
                             margin: const EdgeInsets.only(left: 2.0, right: 2.0, top: 10, bottom: 6),
                             padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 10.0),
                             decoration: BoxDecoration(
-                              color: Color(0xFF35343B),
+                              color: const Color(0xFF35343B),
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             width: double.infinity,
@@ -511,7 +511,7 @@ class AppMetadataWidget extends StatelessWidget {
                             ),
                           ),
                         )
-                      : SizedBox.shrink(),
+                      : const SizedBox.shrink(),
                 ],
               ),
             ),

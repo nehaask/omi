@@ -274,9 +274,10 @@ class ActionItemTileWidget extends StatelessWidget {
     }
 
     // Add to Apple Reminders
-    final success = await service.addReminder(
+  final success = await service.addReminder(
       title: actionItem.description,
       notes: 'From Omi',
+      dueDate: actionItem.dueAt,
       listName: 'Reminders',
     );
     

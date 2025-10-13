@@ -51,9 +51,9 @@ class SpeechProfileCardWidget extends StatelessWidget {
                         }
                       },
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF1F1F25),
-                          borderRadius: const BorderRadius.all(Radius.circular(12)),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF1F1F25),
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
                         ),
                         margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                         padding: const EdgeInsets.all(16),
@@ -107,9 +107,9 @@ class UpdateFirmwareCardWidget extends StatelessWidget {
                       routeToPage(context, FirmwareUpdate(device: provider.pairedDevice));
                     },
                     child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1F1F25),
-                        borderRadius: const BorderRadius.all(Radius.circular(12)),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF1F1F25),
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                       padding: const EdgeInsets.all(16),

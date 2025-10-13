@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:isolate';
 import 'dart:math';
-import 'dart:ui';
 
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,8 +10,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:omi/backend/http/api/notifications.dart';
 import 'package:omi/backend/schema/message.dart';
-import 'package:omi/main.dart';
-import 'package:omi/pages/home/page.dart';
 import 'package:intercom_flutter/intercom_flutter.dart';
 import 'package:omi/services/notifications/notification_interface.dart';
 import 'package:omi/utils/platform/platform_service.dart';

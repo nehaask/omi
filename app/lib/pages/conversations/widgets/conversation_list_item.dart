@@ -165,7 +165,7 @@ class _ConversationListItemState extends State<ConversationListItem> {
                                       color: Colors.grey.shade400,
                                       size: 18,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 12,
                                     ),
                                     Text(

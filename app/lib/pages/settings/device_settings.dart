@@ -6,7 +6,6 @@ import 'package:omi/backend/schema/bt_device/bt_device.dart';
 import 'package:omi/pages/home/firmware_update.dart';
 import 'package:omi/pages/conversations/sync_page.dart';
 import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/onboarding_provider.dart';
 import 'package:omi/services/services.dart';
 import 'package:omi/utils/analytics/intercom.dart';
 import 'package:omi/utils/analytics/mixpanel.dart';

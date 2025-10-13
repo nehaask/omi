@@ -274,9 +274,9 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                     secondary: Colors.deepPurple,
                     surface: Colors.black38,
                   ),
-                  snackBarTheme: SnackBarThemeData(
-                    backgroundColor: const Color(0xFF1F1F25),
-                    contentTextStyle: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500),
+                  snackBarTheme: const SnackBarThemeData(
+                    backgroundColor: Color(0xFF1F1F25),
+                    contentTextStyle: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500),
                   ),
                   textTheme: TextTheme(
                     titleLarge: const TextStyle(fontSize: 18, color: Colors.white),

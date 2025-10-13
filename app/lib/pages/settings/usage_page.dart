@@ -33,7 +33,7 @@ class UsagePage extends StatefulWidget {
 class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
   late TabController _tabController;
   final List<GlobalKey> _screenshotKeys = List.generate(4, (_) => GlobalKey());
-  List<bool> _isMetricVisible = [true, true, true, true];
+  final List<bool> _isMetricVisible = [true, true, true, true];
   bool _isUpgrading = false;
   bool _isCancelling = false;
   bool _isSubscriptionExpanded = false;
@@ -199,9 +199,9 @@ class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
     textPainter.layout();
 
     // Define sizes and padding
-    final double logoHeight = 20 * 3.0; // Scaled logo height
+    const double logoHeight = 20 * 3.0; // Scaled logo height
     final double logoWidth = (logoImage.width / logoImage.height) * logoHeight;
-    final double padding = 4 * 3.0;
+    const double padding = 4 * 3.0;
     final double totalWatermarkWidth = logoWidth + padding + textPainter.width;
     final double totalWatermarkHeight = logoHeight > textPainter.height ? logoHeight : textPainter.height;
 
@@ -253,7 +253,7 @@ class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
     final numberFormatter = NumberFormat.decimalPattern('en_US');
 
     String shareText;
-    final baseText = 'Sharing my Omi stats! (omi.me - your always-on AI assistant)';
+    const baseText = 'Sharing my Omi stats! (omi.me - your always-on AI assistant)';
 
     if (stats != null) {
       final transcriptionMinutes = (stats.transcriptionSeconds / 60).round();
@@ -1326,13 +1326,13 @@ class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
 
   Widget _buildUsageListView(
       UsageStats? stats, List<UsageHistoryPoint>? history, String period, GlobalKey key, UsageProvider provider) {
-    final onRefresh = () async {
+    Future<void> onRefresh() async {
       // Using Future.wait to run both fetches concurrently
       await Future.wait([
         provider.fetchUsageStats(period: period),
         provider.fetchSubscription(),
       ]);
-    };
+    }
 
     if (stats == null) {
       return const Center(child: CircularProgressIndicator(color: Colors.deepPurple));
@@ -1760,10 +1760,10 @@ class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
     final numberFormatter = NumberFormat.decimalPattern('en_US');
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [
-            const Color(0xFF2A2A2E),
-            const Color(0xFF1F1F25),
+            Color(0xFF2A2A2E),
+            Color(0xFF1F1F25),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

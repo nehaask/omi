@@ -213,21 +213,6 @@ class _AppDetailPageState extends State<AppDetailPage> {
         actions: [
           if (app.enabled && app.worksWithChat()) ...[
             GestureDetector(
-              child: chatButtonLoading
-                  ? Container(
-                      width: 16,
-                      height: 16,
-                      alignment: Alignment.center,
-                      child: const SizedBox(
-                        width: 16,
-                        height: 16,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 1,
-                          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                        ),
-                      ),
-                    )
-                  : const Icon(FontAwesomeIcons.solidComments),
               onTap: chatButtonLoading
                   ? null
                   : () async {
@@ -271,6 +256,21 @@ class _AppDetailPageState extends State<AppDetailPage> {
                         }
                       }
                     },
+              child: chatButtonLoading
+                  ? Container(
+                      width: 16,
+                      height: 16,
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 1,
+                          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                        ),
+                      ),
+                    )
+                  : const Icon(FontAwesomeIcons.solidComments),
             ),
             const SizedBox(width: 24),
           ],
@@ -497,7 +497,7 @@ class _AppDetailPageState extends State<AppDetailPage> {
                           text: '',
                           width: MediaQuery.of(context).size.width * 0.9,
                           onPressed: () async {},
-                          color: Color(0xFF35343B),
+                          color: const Color(0xFF35343B),
                         ),
                       ),
                     )

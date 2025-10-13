@@ -264,7 +264,7 @@ class ChatAppsDropdownWidget extends StatelessWidget {
             ],
           ),
         );
-      }).toList(),
+      }),
     ];
   }
 
@@ -391,7 +391,7 @@ class ChatAppsDropdownWidget extends StatelessWidget {
             ],
           ),
         );
-      }).toList(),
+      }),
     ];
   }
 }

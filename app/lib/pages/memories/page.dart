@@ -81,7 +81,7 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
   void showDeleteNotification(String memoryContent, Memory? memory) {
     _removeDeleteNotification();
 
-    final provider = Provider.of<MemoriesProvider>(this.context, listen: false);
+    final provider = Provider.of<MemoriesProvider>(context, listen: false);
 
     _deleteNotificationOverlay = OverlayEntry(
       builder: (_) => Positioned(
@@ -92,7 +92,7 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
           child: Material(
             color: Colors.transparent,
             child: Container(
-              width: MediaQuery.of(this.context).size.width * 0.9,
+              width: MediaQuery.of(context).size.width * 0.9,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
                 color: Colors.black87,
@@ -107,10 +107,10 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
               ),
               child: Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Text(
                       'Memory Deleted.',
-                      style: const TextStyle(color: Colors.white, fontSize: 14),
+                      style: TextStyle(color: Colors.white, fontSize: 14),
                     ),
                   ),
                   TextButton(
@@ -121,10 +121,10 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
                       }
                     },
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(horizontal: 8),
-                      minimumSize: Size(0, 36),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      minimumSize: const Size(0, 36),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Undo',
                       style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w500),
                     ),
@@ -133,9 +133,9 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
                     onPressed: () {
                       _removeDeleteNotification();
                     },
-                    icon: Icon(Icons.close, color: Colors.white70, size: 20),
+                    icon: const Icon(Icons.close, color: Colors.white70, size: 20),
                     padding: EdgeInsets.zero,
-                    constraints: BoxConstraints(),
+                    constraints: const BoxConstraints(),
                     splashRadius: 20,
                   ),
                 ],
@@ -146,7 +146,7 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
       ),
     );
 
-    Overlay.of(this.context).insert(_deleteNotificationOverlay!);
+    Overlay.of(context).insert(_deleteNotificationOverlay!);
 
     Future.delayed(const Duration(seconds: 10), () {
       _removeDeleteNotification();
@@ -255,7 +255,7 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
                                         TextStyle(color: AppStyles.textTertiary, fontSize: 14),
                                       ),
                                       textStyle: WidgetStateProperty.all(
-                                        TextStyle(color: AppStyles.textPrimary, fontSize: 14),
+                                        const TextStyle(color: AppStyles.textPrimary, fontSize: 14),
                                       ),
                                       shape: WidgetStateProperty.all(
                                         RoundedRectangleBorder(
@@ -339,7 +339,7 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
                                           TextStyle(color: AppStyles.textTertiary, fontSize: 14),
                                         ),
                                         textStyle: WidgetStateProperty.all(
-                                          TextStyle(color: AppStyles.textPrimary, fontSize: 14),
+                                          const TextStyle(color: AppStyles.textPrimary, fontSize: 14),
                                         ),
                                         shape: WidgetStateProperty.all(
                                           RoundedRectangleBorder(
@@ -479,7 +479,7 @@ class MemoriesPageState extends State<MemoriesPage> with AutomaticKeepAliveClien
                             delegate: _ReviewPromptHeaderDelegate(
                               height: 56.0,
                               child: Material(
-                                color: Theme.of(context).colorScheme.surfaceVariant,
+                                color: Theme.of(context).colorScheme.surfaceContainerHighest,
                                 elevation: 1,
                                 child: InkWell(
                                   onTap: () => _showReviewSheet(context, provider.unreviewed, provider),
