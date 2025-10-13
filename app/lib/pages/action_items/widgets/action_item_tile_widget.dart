@@ -277,7 +277,6 @@ class ActionItemTileWidget extends StatelessWidget {
   final success = await service.addReminder(
       title: actionItem.description,
       notes: 'From Omi',
-      dueDate: actionItem.dueAt,
       listName: 'Reminders',
     );
     
